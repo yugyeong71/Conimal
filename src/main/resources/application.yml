@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://210.119.104.148:3306/conimal
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: 1q2w3e4r
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
