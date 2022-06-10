@@ -29,7 +29,7 @@ public class PostController {
 
         Post post = Post.builder()
                 .userId(user)
-                .img(postForm.getImg())
+                .imageId(postForm.getImg())
                 .likeNum(5)
                 .createDate(LocalDate.now())
                 .editDate(LocalDate.now())
@@ -43,9 +43,10 @@ public class PostController {
     }
 
     @GetMapping("/post/list") //  게시글 목록 조회
-    public List<Post> postList(){
-        //return postRepository.findAll();
-        return postRepository.findAll();
+    public List<Post.PostLists> postList(){
+        // postId, userId, like num ???
+
+        return postRepository.findAllBy();
     }
 
     @DeleteMapping("/post/{postId}") // 게시글 삭제
